@@ -72,6 +72,7 @@ const Header = () => {
                 <li><Link to="/test-ride" onClick={closeMenu}>Test Ride</Link></li>
                 <li><Link to="/sell" onClick={closeMenu}>Sell Vehicle</Link></li>
                 <li><Link to="/profile" onClick={closeMenu}>Profile</Link></li>
+  
                 {!user && (
                   <li>
                     <button 
@@ -121,21 +122,20 @@ const Header = () => {
             <li><Link to="/upcoming" onClick={closeMenu}>Upcoming Launches</Link></li>
             <li><Link to="/test-ride" onClick={closeMenu}>Test Ride</Link></li>
             <li><Link to="/sell" onClick={closeMenu}>Sell Vehicle</Link></li>
-            <li><Link to="/profile" onClick={closeMenu}>Profile</Link></li>
-        
             {!user ? (
-              <li>
-                <button 
-                  className="signup-btn-stunning" 
-                  onClick={() => {
-                    closeMenu();
-                    openAuthForm('signup');
-                  }}
-                >
-                  Sign Up
-                </button>
-              </li>
-             <li>
+              <>
+                <li>
+                  <button 
+                    className="signup-btn-stunning" 
+                    onClick={() => {
+                      closeMenu();
+                      openAuthForm('signup');
+                    }}
+                  >
+                    Sign Up
+                  </button>
+                </li>
+                <li>
                   <button 
                     className="login-btn" 
                     onClick={() => {
@@ -146,10 +146,25 @@ const Header = () => {
                     Login
                   </button>
                 </li>
+              </>
             ) : (
               <>
-                <li><Link to="/profile" onClick={closeMenu}>Profile</Link></li>
-                {isDealer && <li><Link to="/dealer" onClick={closeMenu}>Dealer Dashboard</Link></li>}
+                <li>
+                  <Link to="/profile" onClick={closeMenu} className="profile-link">
+                    <button className="profile-btn">
+                      Profile
+                    </button>
+                  </Link>
+                </li>
+                {isDealer && (
+                  <li>
+                    <Link to="/dealer" onClick={closeMenu} className="dealer-link">
+                      <button className="dealer-btn">
+                        Dealer Dashboard
+                      </button>
+                    </Link>
+                  </li>
+                )}
                 <li>
                   <button 
                     onClick={() => {
