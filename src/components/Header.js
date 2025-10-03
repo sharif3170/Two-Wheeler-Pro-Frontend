@@ -71,6 +71,7 @@ const Header = () => {
                 <li><Link to="/upcoming" onClick={closeMenu}>Upcoming Launches</Link></li>
                 <li><Link to="/test-ride" onClick={closeMenu}>Test Ride</Link></li>
                 <li><Link to="/sell" onClick={closeMenu}>Sell Vehicle</Link></li>
+                <li><Link to="/profile" onClick={closeMenu}>Profile</Link></li>
                 {!user && (
                   <li>
                     <button 
