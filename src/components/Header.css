@@ -195,6 +195,7 @@
   transition: transform 0.3s ease-in-out;
   z-index: 999;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
 }
 
 .mobile-menu.open {
@@ -203,6 +204,7 @@
 
 .mobile-menu-content {
   padding: 1rem;
+  min-height: 100%; /* Ensure content takes full height */
 }
 
 .mobile-menu-content ul {
@@ -410,6 +412,11 @@
   .search-btn {
     padding: 0 0.75rem;
     font-size: 0.9rem;
+  }
+  
+  .mobile-menu {
+    top: 50px; /* Adjust for mobile header height */
+    height: calc(100vh - 50px);
   }
 }
 

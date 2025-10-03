@@ -121,6 +121,12 @@ const SellVehicle = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    // Check if user is logged in
+    if (!user) {
+      setError('Please log in to submit a vehicle for sale');
+      return;
+    }
+    
     // Validate form before submitting
     if (!validateForm()) {
       setError('Please fix the errors in the form');
@@ -133,8 +139,8 @@ const SellVehicle = () => {
     try {
       // Include userId in the submission if user is logged in
       const submissionData = {
-        ...formData,
-        userId: user ? user._id : null
+        ...formData
+        // Remove userId from submissionData as it will be handled by the backend
       };
       
       console.log('Submitting data:', submissionData);
@@ -143,6 +149,10 @@ const SellVehicle = () => {
         `${process.env.REACT_APP_API_URL}/sell-vehicle/submit`,
         submissionData,
         {
+          headers: {
+            'user-id': user._id, // Add user ID header for authentication
+            'Content-Type': 'application/json'
+          },
           withCredentials: true // Add credentials for authentication
         }
       );
@@ -176,6 +186,8 @@ const SellVehicle = () => {
       console.error('Error submitting vehicle for sale:', err);
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);
+      } else if (err.response && err.response.status === 401) {
+        setError('Authentication required. Please log in to submit a vehicle for sale.');
       } else if (err.response) {
         setError(`Server error: ${err.response.status} - ${err.response.statusText}`);
       } else if (err.request) {
@@ -384,10 +396,17 @@ const SellVehicle = () => {
                   ></textarea>
                 </div>
                 
+                {/* Show login prompt if user is not logged in */}
+                {!user && (
+                  <div className="login-prompt">
+                    <p>Please log in to submit your vehicle for sale.</p>
+                  </div>
+                )}
+                
                 <button 
                   type="submit" 
                   className="btn btn-primary btn-block"
-                  disabled={isLoading}
+                  disabled={isLoading || !user} // Disable if loading or user not logged in
                 >
                   {isLoading ? 'Submitting...' : 'Submit for Evaluation'}
                 </button>

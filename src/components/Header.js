@@ -36,6 +36,20 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  // Close menu when clicking outside
+  React.useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (isMenuOpen && !e.target.closest('.mobile-menu') && !e.target.closest('.hamburger-btn')) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       <header className="header">
@@ -77,7 +91,7 @@ const Header = () => {
             </nav>
             {/* Mobile hamburger menu button */}
             <div className="mobile-menu-toggle">
-              <button className="hamburger-btn" onClick={toggleMenu}>
+              <button className="hamburger-btn" onClick={toggleMenu} aria-label="Toggle menu">
                 <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
                 <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
                 <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
@@ -95,7 +109,7 @@ const Header = () => {
       </header>
       
       {/* Mobile navigation menu */}
-      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
         <div className="mobile-menu-content">
           <ul>
             <li><Link to="/" onClick={closeMenu}>Home</Link></li>

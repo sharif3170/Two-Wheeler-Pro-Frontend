@@ -1,19 +1,19 @@
 {
-  "short_name": "Vaahan Bazaar",
-  "name": "Vaahan Bazaar - Two Wheeler Marketplace",
+  "short_name": "Two Wheeler Pro",
+  "name": "Two Wheeler Pro - Two Wheeler Marketplace",
   "icons": [
     {
-      "src": "vaahan.png",
+      "src": "two.png",
       "sizes": "467x467",
       "type": "image/png"
     },
     {
-      "src": "vaahan.png",
+      "src": "two.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "vaahan.png",
+      "src": "two.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -72,6 +72,13 @@ const TestRide = () => {
     setIsLoading(true);
     setError('');
     
+    // Check if user is logged in
+    if (!user) {
+      setError('Please log in to book a test ride');
+      setIsLoading(false);
+      return;
+    }
+    
     // Validation
     if (!formData.name || !formData.email || !formData.phone || 
         !formData.vehicle || !formData.date || !formData.time || !formData.showroom) {
@@ -104,8 +111,8 @@ const TestRide = () => {
         vehicleId: parseInt(formData.vehicle),
         date: formData.date,
         time: formData.time,
-        showroom: formData.showroom,
-        userId: user?._id || null
+        showroom: formData.showroom
+        // Remove userId from testRideData as it will be handled by the backend
       };
       
       const response = await axios.post(
@@ -113,6 +120,7 @@ const TestRide = () => {
         testRideData,
         {
           headers: {
+            'user-id': user._id, // Add user ID header for authentication
             'Content-Type': 'application/json'
           }
         }
@@ -142,6 +150,8 @@ const TestRide = () => {
       console.error('Error booking test ride:', err);
       if (err.response && err.response.data && err.response.data.message) {
         setError(err.response.data.message);
+      } else if (err.response && err.response.status === 401) {
+        setError('Authentication required. Please log in to book a test ride.');
       } else {
         setError('Failed to book test ride. Please try again.');
       }
@@ -308,7 +318,18 @@ const TestRide = () => {
                   )}
                 </div>
                 
-                <button type="submit" className="btn btn-primary btn-block" disabled={isLoading}>
+                {/* Show login prompt if user is not logged in */}
+                {!user && (
+                  <div className="login-prompt">
+                    <p>Please log in to book your test ride.</p>
+                  </div>
+                )}
+                
+                <button 
+                  type="submit" 
+                  className="btn btn-primary btn-block"
+                  disabled={isLoading || !user} // Disable if loading or user not logged in
+                >
                   {isLoading ? 'Booking...' : 'Confirm Test Ride Booking'}
                 </button>
               </form>
