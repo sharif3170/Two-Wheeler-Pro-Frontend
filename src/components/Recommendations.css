@@ -1,0 +1,372 @@
+.recommendations-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.recommendations-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.recommendations-section h2 {
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recommendations-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  position: relative;
+  border: 1px solid #e1e8ed;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.vehicle-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+  background-color: #f8f9fa;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.vehicle-card:hover .vehicle-image img {
+  transform: scale(1.08);
+}
+
+.vehicle-info {
+  padding: 2rem;
+}
+
+.vehicle-info h3 {
+  margin: 0 0 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brand {
+  color: #7f8c8d;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .recommendations-section .container {
+    padding: 0 1.2rem;
+  }
+  
+  .vehicle-image {
+    height: 200px;
+  }
+  
+  .vehicle-info {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .recommendations-section {
+    padding: 2.5rem 0;
+  }
+  
+  .recommendations-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .vehicle-image {
+    height: 190px;
+  }
+  
+  .vehicle-info {
+    padding: 1.5rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .brand {
+    font-size: 1rem;
+  }
+  
+  .price {
+    font-size: 1.4rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .recommendations-section {
+    padding: 2rem 0;
+  }
+  
+  .recommendations-section .container {
+    padding: 0 1rem;
+  }
+  
+  .recommendations-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .vehicle-info {
+    padding: 1.5rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .brand {
+    font-size: 0.95rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+  
+  .recommendations-section {
+    padding: 1.8rem 0;
+  }
+  
+  .recommendations-section .container {
+    padding: 0 0.8rem;
+  }
+  
+  .recommendations-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .recommendations-section h2::after {
+    width: 70px;
+    height: 3px;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .vehicle-info {
+    padding: 1.3rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .brand {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .recommendations-section {
+    padding: 1.5rem 0;
+  }
+  
+  .recommendations-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .recommendations-section h2::after {
+    width: 60px;
+    height: 3px;
+    bottom: -8px;
+  }
+  
+  .vehicle-image {
+    height: 220px;
+  }
+  
+  .vehicle-info {
+    padding: 1.2rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .brand {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendations-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .recommendations-section h2::after {
+    width: 50px;
+    height: 3px;
+  }
+  
+  .vehicle-image {
+    height: 200px;
+  }
+  
+  .vehicle-info {
+    padding: 1rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1rem;
+  }
+  
+  .brand {
+    font-size: 0.85rem;
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}

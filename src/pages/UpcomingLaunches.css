@@ -1,0 +1,433 @@
+.upcoming-launches {
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  min-height: calc(100vh - 160px);
+  width: 100%;
+}
+
+.upcoming-launches .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.upcoming-launches h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.upcoming-launches h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+  margin: 0.8rem auto;
+  border-radius: 2px;
+}
+
+.upcoming-launches p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.vehicle-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  border: 1px solid #e1e8ed;
+}
+
+.vehicle-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.vehicle-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: none;
+}
+
+.vehicle-card:hover .vehicle-image img {
+  /* Removed transform effect */
+}
+
+.launch-date {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+  z-index: 2;
+}
+
+.vehicle-info {
+  padding: 2rem;
+}
+
+.vehicle-info h3 {
+  margin: 0 0 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brand {
+  color: #3498db;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.type {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 500;
+  background: linear-gradient(135deg, #ecf0f1, #d5dbdb);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.price {
+  font-weight: 800;
+  color: #27ae60;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: #7f8c8d;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: none;
+  width: 100%;
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive Design - 4 vehicles per row on large screens */
+@media (max-width: 1400px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .upcoming-launches h1 {
+    font-size: 2.5rem;
+  }
+  
+  .vehicle-image {
+    height: 200px;
+  }
+  
+  .vehicle-info {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .upcoming-launches h1 {
+    font-size: 2.3rem;
+  }
+  
+  .upcoming-launches p {
+    font-size: 1.1rem;
+  }
+  
+  .vehicle-image {
+    height: 190px;
+  }
+  
+  .vehicle-info {
+    padding: 1.5rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .upcoming-launches {
+    padding: 1.8rem 0;
+  }
+  
+  .upcoming-launches .container {
+    padding: 0 1.2rem;
+  }
+  
+  .upcoming-launches h1 {
+    font-size: 2.1rem;
+  }
+  
+  .upcoming-launches p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .vehicle-info {
+    padding: 1.5rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+  
+  .upcoming-launches {
+    padding: 1.5rem 0;
+  }
+  
+  .upcoming-launches .container {
+    padding: 0 1rem;
+  }
+  
+  .upcoming-launches h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .upcoming-launches h1::after {
+    width: 80px;
+    height: 3px;
+  }
+  
+  .upcoming-launches p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .vehicle-info {
+    padding: 1.3rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .brand {
+    font-size: 1rem;
+  }
+  
+  .type {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .upcoming-launches {
+    padding: 1.2rem 0;
+  }
+  
+  .upcoming-launches .container {
+    padding: 0 0.8rem;
+  }
+  
+  .upcoming-launches h1 {
+    font-size: 1.8rem;
+  }
+  
+  .upcoming-launches h1::after {
+    width: 70px;
+    height: 3px;
+  }
+  
+  .upcoming-launches p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .vehicle-image {
+    height: 220px;
+  }
+  
+  .vehicle-info {
+    padding: 1.2rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .brand {
+    font-size: 0.95rem;
+  }
+  
+  .type {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upcoming-launches h1 {
+    font-size: 1.7rem;
+  }
+  
+  .upcoming-launches h1::after {
+    width: 60px;
+  }
+  
+  .upcoming-launches p {
+    font-size: 0.9rem;
+  }
+  
+  .vehicle-image {
+    height: 200px;
+  }
+  
+  .vehicle-info {
+    padding: 1rem;
+  }
+  
+  .vehicle-info h3 {
+    font-size: 1rem;
+  }
+  
+  .brand {
+    font-size: 0.9rem;
+  }
+  
+  .type {
+    font-size: 0.8rem;
+  }
+  
+  .price {
+    font-size: 0.95rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}

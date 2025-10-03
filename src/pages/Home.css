@@ -1,0 +1,989 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 7rem 1rem;
+  margin-bottom: 0;
+}
+
+/* Mobile-only hero image - removed as we'll use background image */
+.mobile-hero-image {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-content {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #27ae60, #219653);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Category Sections */
+.category-section {
+  padding: 3.5rem 0;
+  background-color: #f8f9fa;
+}
+
+.category-section:nth-child(even) {
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Category Title */
+.category-title {
+  margin: 0 0 2.5rem 0;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  display: block;
+  width: 100%;
+  clear: both;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+}
+
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+/* Stylish Title for MotorBikes */
+.stylish-title {
+  position: relative;
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #e74c3c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 30px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #817373, #1f1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  width: 100%;
+  float: none;
+  clear: both;
+  text-align: center;
+}
+
+/* Netflix Style Row */
+.netflix-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.8rem;
+  padding: 1.8rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: #3498db #f1f1f1;
+  width: 100%;
+  clear: both;
+  margin-top: 2.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.netflix-row::-webkit-scrollbar {
+  height: 10px;
+}
+
+.netflix-row::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.netflix-row::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 5px;
+}
+
+.netflix-row::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Netflix Style Card */
+.netflix-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  border: 1px solid #e1e8ed;
+}
+
+.netflix-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.netflix-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.netflix-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  background-color: #fff;
+  display: block;
+}
+
+.netflix-card:hover .netflix-card-image img {
+  transform: scale(1.08);
+}
+
+/* Vehicle Card (used in Home) */
+.vehicle-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #e1e8ed;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.vehicle-image {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vehicle-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.vehicle-card:hover .vehicle-image img {
+  transform: scale(1.08);
+}
+
+/* Netflix Card Info */
+.netflix-card-info {
+  padding: 1.8rem;
+}
+
+.netflix-card-info h3 {
+  margin: 0 0 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.brand {
+  color: #7f8c8d;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #27ae60;
+  margin-bottom: 1.2rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.stars {
+  color: #f39c12;
+  font-size: 1.1rem;
+}
+
+.rating-value {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.view-details-btn {
+  display: inline-block;
+  padding: 1rem 1.3rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.view-details-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Empty Favorites Message */
+.empty-favorites {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+}
+
+.empty-favorites p {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Test Ride Section */
+.test-ride-section {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.test-ride-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.test-ride-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.test-ride-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3498db;
+}
+
+.test-ride-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ecf0f1;
+}
+
+.test-ride-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #2ecc71;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #ecf0f1;
+}
+
+.test-ride-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.test-ride-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.test-ride-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.test-ride-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Professional Feedback/Suggestions Section */
+.feedback-section {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.feedback-section .category-title {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.feedback-section .category-title::after {
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.feedback-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #ecf0f1;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feedback-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feedback-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #3498db;
+}
+
+.feedback-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #bdc3c7;
+}
+
+.feedback-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #2ecc71;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #ecf0f1;
+}
+
+.feedback-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.feedback-stats {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #3498db;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: #ecf0f1;
+}
+
+@media (max-width: 992px) {
+  .feedback-content {
+    flex-direction: column;
+  }
+  
+  .feedback-info,
+  .feedback-stats {
+    width: 100%;
+  }
+  
+  .feedback-section {
+    padding: 3rem 0;
+  }
+  
+  .feedback-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+  
+  .test-ride-content {
+    flex-direction: column;
+  }
+  
+  .test-ride-info,
+  .test-ride-image {
+    width: 100%;
+  }
+  
+  .test-ride-section {
+    padding: 3rem 0;
+  }
+  
+  .test-ride-info h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .category-section {
+    padding: 2.5rem 0;
+  }
+  
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .category-title::after {
+    width: 70px;
+    height: 3px;
+    bottom: -8px;
+  }
+  
+  .stylish-title {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    padding: 20px 0;
+  }
+  
+  .netflix-row {
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+  }
+  
+  .netflix-card-image {
+    height: 160px;
+  }
+  
+  .vehicle-image {
+    height: 160px;
+  }
+  
+  .netflix-card-info {
+    padding: 1.3rem;
+  }
+  
+  .netflix-card-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .brand {
+    font-size: 0.95rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .rating {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .view-details-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .feedback-section {
+    padding: 2.5rem 0;
+  }
+  
+  .feedback-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feedback-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .feedback-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .test-ride-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .test-ride-info p {
+    font-size: 1.1rem;
+  }
+  
+  .test-ride-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .empty-favorites {
+    padding: 1.5rem;
+  }
+  
+  .empty-favorites p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .category-section {
+    padding: 2rem 0;
+  }
+  
+  .category-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .category-title::after {
+    width: 60px;
+    height: 3px;
+    bottom: -6px;
+  }
+  
+  .stylish-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 18px 0;
+  }
+  
+  .netflix-row {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+  
+  .netflix-card {
+    width: 100%;
+  }
+  
+  .vehicle-card {
+    width: 100%;
+  }
+  
+  .netflix-card-image {
+    height: 180px;
+  }
+  
+  .vehicle-image {
+    height: 180px;
+  }
+  
+  .netflix-card-info {
+    padding: 1.2rem;
+  }
+  
+  .netflix-card-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .brand {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+  }
+  
+  .view-details-btn {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  
+  .netflix-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .feedback-section {
+    padding: 2rem 0;
+  }
+  
+  .feedback-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .feedback-btn {
+    width: 100%;
+    padding: 0.9rem 1rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.6rem;
+  }
+  
+  .stat-card {
+    padding: 1.2rem;
+  }
+  
+  .test-ride-info h2 {
+    font-size: 1.6rem;
+  }
+  
+  .test-ride-btn {
+    width: 100%;
+    padding: 0.9rem 1rem;
+  }
+  
+  .test-ride-benefits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .benefit-card {
+    padding: 1rem;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .empty-favorites {
+    padding: 1rem;
+  }
+  
+  .empty-favorites p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+  
+  .stylish-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    padding: 15px 0;
+  }
+  
+  .netflix-card-image {
+    height: 160px;
+  }
+  
+  .vehicle-image {
+    height: 160px;
+  }
+  
+  .netflix-card-info {
+    padding: 1rem;
+  }
+  
+  .netflix-card-info h3 {
+    font-size: 1rem;
+  }
+  
+  .brand {
+    font-size: 0.85rem;
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+  
+  .stars {
+    font-size: 0.9rem;
+  }
+  
+  .rating-value {
+    font-size: 0.9rem;
+  }
+  
+  .view-details-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

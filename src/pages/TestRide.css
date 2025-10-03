@@ -1,0 +1,363 @@
+.test-ride {
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  min-height: 100vh;
+}
+
+.test-ride .container {
+  max-width: 1200px;
+}
+
+.test-ride h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.test-ride p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test-ride-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.form-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 3px;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #c62828;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  background: white;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #2573a7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.info-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+}
+
+.info-section h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 3px;
+}
+
+.info-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-section li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  color: #34495e;
+  position: relative;
+}
+
+.info-section li::before {
+  content: '✓';
+  color: #27ae60;
+  font-weight: bold;
+  position: absolute;
+  left: -1.5rem;
+}
+
+.info-section p {
+  color: #34495e;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.tips {
+  background: linear-gradient(135deg, #e8f4fc 0%, #d1e7f9 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border-left: 4px solid #3498db;
+}
+
+.tips h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.tips p {
+  text-align: left;
+  margin: 0.8rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #3498db;
+}
+
+.tips p:last-child {
+  border-bottom: none;
+}
+
+.tips p::before {
+  content: '→';
+  margin-right: 0.5rem;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.success-message {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.success-message h2 {
+  color: #27ae60;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.success-message p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.success-message .btn-primary {
+  display: inline-block;
+  width: auto;
+  padding: 1rem 2rem;
+}
+
+/* Vehicle Preview Section */
+.vehicle-preview {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.vehicle-preview img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.vehicle-preview h4 {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.vehicle-preview p {
+  margin: 0.2rem 0;
+  color: #7f8c8d;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .test-ride h1 {
+    font-size: 2.2rem;
+  }
+  
+  .test-ride-content {
+    gap: 1.5rem;
+  }
+  
+  .form-section,
+  .info-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .test-ride {
+    padding: 1.5rem 0;
+  }
+  
+  .test-ride h1 {
+    font-size: 2rem;
+  }
+  
+  .test-ride-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-section,
+  .info-section {
+    padding: 1.5rem;
+  }
+  
+  .success-message {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .test-ride {
+    padding: 1rem 0;
+  }
+  
+  .test-ride h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-section,
+  .info-section {
+    padding: 1rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .btn-block {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .success-message {
+    padding: 1.5rem 1rem;
+  }
+  
+  .success-message h2 {
+    font-size: 1.5rem;
+  }
+}

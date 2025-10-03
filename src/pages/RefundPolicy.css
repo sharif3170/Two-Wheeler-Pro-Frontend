@@ -1,0 +1,103 @@
+.refund-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.refund-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e74c3c, #2c3e50);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.refund-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.refund-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.refund-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.refund-section {
+  margin-bottom: 2rem;
+}
+
+.refund-section:last-child {
+  margin-bottom: 0;
+}
+
+.refund-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e74c3c;
+}
+
+.refund-section h3 {
+  color: #34495e;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.refund-section p {
+  color: #34495e;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.refund-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.refund-section ul li {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .refund-container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+  
+  .refund-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .refund-header h1 {
+    font-size: 2rem;
+  }
+  
+  .refund-content {
+    padding: 1.5rem;
+  }
+  
+  .refund-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .refund-section h3 {
+    font-size: 1.1rem;
+  }
+}
