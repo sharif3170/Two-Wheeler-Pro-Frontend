@@ -159,22 +159,8 @@ const Header = () => {
               </>
             ) : (
               <>
-                <li>
-                  <Link to="/profile" onClick={closeMenu} className="profile-link">
-                    <button className="profile-btn">
-                      Profile
-                    </button>
-                  </Link>
-                </li>
-                {isDealer && (
-                  <li>
-                    <Link to="/dealer" onClick={closeMenu} className="dealer-link">
-                      <button className="dealer-btn">
-                        Dealer Dashboard
-                      </button>
-                    </Link>
-                  </li>
-                )}
+                <li><Link to="/profile" onClick={closeMenu}>Profile</Link></li>
+                {isDealer && <li><Link to="/dealer" onClick={closeMenu}>Dealer Dashboard</Link></li>}
                 <li>
                   <button 
                     onClick={() => {
